@@ -67,5 +67,26 @@ body {
 }
 
 .form-control small {
-  border-color: var(--error-color);
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
 }
