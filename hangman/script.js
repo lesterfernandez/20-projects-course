@@ -1,6 +1,6 @@
 const wordEl = document.getElementById("word");
 const wrongLettersEl = document.getElementById("wrong-letters");
-const playAgainBtn = document.getElementById("play-again");
+const playAgainBtn = document.getElementById("play-button");
 const popup = document.getElementById("popup-container");
 const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
@@ -35,12 +35,36 @@ function displayWord() {
   const innerWord = wordEl.innerText.replace(/\n/g, "");
 
   if (innerWord === selectedWord) {
+    console.log("lost");
     finalMessage.innerText = "Congratulations! You won! 😃";
     popup.style.display = "flex";
   }
 }
 
-function updateWrongLettersEl() {}
+function updateWrongLettersEl() {
+  // Display wrong letters
+  wrongLettersEl.innerHTML = `
+    ${wrongLetters.length > 0 ? "<p>Wrong</p>" : ""}
+    ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+  `;
+
+  // Display body parts
+  figureParts.forEach((part, i) => {
+    const errors = wrongLetters.length;
+
+    if (i < errors) {
+      part.style.display = "block";
+    } else {
+      part.style.display = "none";
+    }
+  });
+
+  // Check if lost
+  if (wrongLetters.length === figureParts.length) {
+    finalMessage.innerText = "Unfortunately you lost.. 😕";
+    popup.style.display = "flex";
+  }
+}
 
 function showNotification() {
   notification.classList.add("show");
@@ -78,6 +102,18 @@ window.addEventListener("keydown", e => {
       }
     }
   }
+});
+
+playAgainBtn.addEventListener("click", () => {
+  correctLetters.splice(0);
+  wrongLetters.splice(0);
+
+  selectedWord = words[Math.floor(Math.random() * words.length)];
+
+  displayWord();
+
+  updateWrongLettersEl();
+  popup.style.display = "none";
 });
 
 displayWord();
