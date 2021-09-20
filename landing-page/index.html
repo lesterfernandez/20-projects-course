@@ -15,5 +15,114 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <!-- <input type="checkbox" name="nav-toggle" id="nav-toggle" /> -->
+    <nav>
+      <div class="logo">
+        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user" />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <button id="toggle" class="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+      <h1>My Landing Page</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, enim?</p>
+      <button class="cta-btn" id="open">Sign Up</button>
+    </header>
+    <div class="container">
+      <h2>What is this landing page about</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eveniet in tempora
+        possimus. Ullam repellat esse accusantium fuga magni maiores qui rem quis
+        totam. Delectus doloremque non distinctio aut labore?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        molestiae omnis aperiam accusamus eveniet facere reiciendis ducimus facilis,
+        quisquam officia.
+      </p>
+      <h2>Tell me more</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cumque
+        numquam earum cum ad reiciendis, alias, impedit harum, corrupti excepturi ab
+        corporis nemo laudantium voluptate aliquid. Vero, sint nesciunt perspiciatis
+        tempore minima accusantium, officia, tenetur est quisquam similique quibusdam
+        distinctio!
+      </p>
+      <h2>Benefits</h2>
+      <ul>
+        <li>Lifetime Access</li>
+        <li>30 Day Money Back</li>
+        <li>Tailored Customer Support</li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores laborum eum
+        veritatis culpa eveniet velit numquam? Provident accusantium officia aperiam
+        quos unde magnam asperiores assumenda maxime eum. Officiis in dignissimos id
+        optio et, voluptatibus quibusdam, soluta voluptas similique nostrum esse dolor
+        molestias tempore eligendi eum corrupti tempora deserunt nam! Ullam, eos.
+        Tempora alias impedit enim animi odio fuga debitis corrupti quas facilis, ex
+        adipisci, mollitia laborum? Earum numquam quae architecto?
+      </p>
+    </div>
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="modal-content">
+          <p>Register with us to get offers, support, and more</p>
+          <form class="modal-form">
+            <div>
+              <label for="name"></label>Name<input
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="email"></label>Email<input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="password"></label
+              ><input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="password-confirm"></label
+              ><input
+                type="password"
+                id="password-confirm"
+                placeholder="Confirm Password"
+                class="form-input"
+              />
+            </div>
+            <input type="submit" value="Submit" class="submit-btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+  </body>
 </html>
