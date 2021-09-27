@@ -92,7 +92,7 @@ function init() {
 
 // remove transaction by ID
 function removeTransaction(id) {
-  transactions = transactions.filter(item => item !== id);
+  transactions = transactions.filter(transaction => transaction.id !== id);
   init();
   updateLocalStorage();
 }
